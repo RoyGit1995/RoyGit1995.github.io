@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/05ca889406.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Images/final logo.png" class="logo">
+                <ul id = "sidemenu">
+                    <li><a href="#home">Home.</a></li>
+                    <li><a href="#about">About.</a></li>
+                    <li><a href="#services">Services.</a></li>
+                    <li><a href="#portfolio">Portfolio.</a></li>
+                    <li><a href="#contact">Contact.</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Hi there,</p>
+                <h1>I'm <span>Roy Veliath</span> <br></h1>
+                <h3><i><span> User Experience and Interaction designer, 
+                    <br>from India </span> </i> </h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- about section--> 
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/SecondImage.jpg" class="aboutimage">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p><br>Disciplined, organised professional with 4+ years of experience in object-oriented analysis
+                        and ux design experience with exceptional record overseeing all the facets of software
+                        development life cycle. 
+                        <br>Currently pursuing a course in Experience and Interaction design in Ireland.
+                        <br>My journey is to upgrade my knowledge and gain a deep knowledge in understanding user perspective that is going to help me bridge business
+                        to customer needs in a ethical and efficient way possible.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br> Designing User Experience</li>
+                            <li><span>Java Backend Developer</span><br> Backend Development with RestAPI, Spring Boot, Microservices</li>
+                            <li><span>Database</span><br> SQL and no-SQL that works along backend with data manipulation</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>2018 - 2021</span><br> Junior Software engineer - Speridian Technologies</li>
+                            <li><span>2021 - 2021</span><br> Senior Software engineer - Qburst Technologies</li>
+                            <li><span>2022</span><br> UX Engineer - Qburst Technologies</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>2011</span><br> Secondary Education - Naipunnya Public School with 88% grade</li>
+                            <li><span>2011 - 2013</span><br> Higher Education - CBSE with 78% grade</li>
+                            <li><span>2013 - 2017</span><br> Engineering - Calicut with 7.4 CGPA</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----Services-->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Development</h2>
+                    <p>Back-end development entails working on server-side software, which is concerned with everything that cannot be seen on a website.
+                        I ensure that the website functions properly by concentrating on databases, back-end logic, application programming interfaces (APIs), 
+                        architecture, and servers. 
+                        <br> Finally, I employ code that allows browsers to communicate with one another.
+                        <br><br>
+                        - Java
+                        <br>- Spring Boot
+                        <br>- RestfulAPI
+                        <br>- Database like SQL and no-SQL
+                    </p>
+                    <a href="https://www.coursera.org/articles/back-end-developer">Click here to know more about Web Development</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>UX Design</h2>
+                    <p>User experience (UX) design is the process design teams use to create products that provide meaningful 
+                        and relevant experiences to users. 
+                        I can design an experience that includes not only making the software easy to use but also
+                        designing the other experiences related to the product. 
+                        Most importantly, designs that is concerned with delivering 
+                        solutions that address pain points and needs of the user.
+                        <br><br>
+                        - Figma
+                        <br>- Adobe photoshop
+                        <br>- Miro
+                        <br>- Azure
+                    </p>
+                    <a href="https://www.interaction-design.org/literature/topics/ux-design">Click here to know more about UX Design</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>UI Design</h2>
+                    <p>UX and UI share the same end goal—to provide a positive experience 
+                        for the user—but UI Design comprises an entirely separate leg of the journey.
+                        <br><br> I use UI to design interaction with a product for the user
+                        and use things like patterns, spacing, and color to guide the user. 
+                        I use this empathy to design visual, interactive elements that respond in a way that feels natural to the user. 
+                        <br><br>
+                        - Visual Studio
+                        <br>- Html
+                        <br>- Css
+                        <br>- JavaScript
+                    </p>
+                    <a href="https://careerfoundry.com/en/blog/ui-design/what-does-a-ui-designer-actually-do/">Click here to know more about UI Design</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----Portfolio-->
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="Images/TopKartaa.jpg">
+                    <div class="layer">
+                        <h3>TopKart</h3>
+                        <p>A design intervention to improve the shopping experience at supermarkets.The idea was to develop
+                            a prototype that showcase a unique product idea with some interesting solutions.
+                        </p>
+                        <a href="Documents/TopKart.pdf"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Images/photography.jpg">
+                    <div class="layer">
+                        <h3>Photography</h3>
+                        <p>A photography assignment dedicated to moments in 
+                            the movments. an attempt by me using my street photography camera around the city of Limerick.
+                        </p>
+                        <a href="Documents/Photography.pdf"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Images/Rooster.jpg">
+                    <div class="layer">
+                        <h3>Audio Works</h3>
+                        <p>A radio advert assignment about a funny theme and a brand promo
+                        </p>
+                        <a href="Documents/Photography.pdf"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <p><br>
+                        </p>
+                        <audio controls>
+                            <source src="Documents/ad.mp3" type="audio/mpeg">
+                          Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----Contact-->
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>royveliath@gmail.com</p>
+                    <p><i class="fa-sharp fa-solid fa-square-phone"></i>9656948770</p>
+                    <div class="social-icons">
+                        <a href="https://m.facebook.com/roy.veliath/"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/real_royyy/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://in.linkedin.com/in/roy-veliath-7194b7131?trk=pub-pbmap"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="Images/Resume.pdf" class="btn btn2" download class="btn btn2">Download Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright @ royveliath, made with <i class="fa-solid fa-heart"></i> portfolio website</p>
+        </div>
+    </div>
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname)
+    {
+        for(tablink of tablinks)
+        {
+            tablink.classList.remove("active-link");
+            
+        }
+
+        for(tabcontent of tabcontents)
+        {
+            tabcontent.classList.remove("active-tab");
+            
+        }
+
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+<script>
+
+
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu()
+    {
+        sidemenu.style.right="0";
+    }
+    function closemenu()
+    {
+        sidemenu.style.right="-200px";
+    }
+
+
+
+</script> 
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbz4sGxnM6UK61DymWnT7RT9pu8oJQWtDNZd5Vr68B18jlS0ZEUG5glFjDTQIsk02e6W/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg");
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function()
+            {
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+
+</body>
+</html>
