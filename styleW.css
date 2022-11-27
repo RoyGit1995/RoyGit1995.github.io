@@ -1,0 +1,435 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    }
+    
+    html
+    {
+        scroll-behavior: smooth;
+    }
+    
+    body{
+        background: #242424;
+        color: #ffffff;
+    }
+
+
+    #portfolio
+    {
+        padding: 50px 0;
+    }
+
+    .sub-title
+    {
+        font-size: 30px;
+        font-weight: 600;
+        margin-left: 25px;
+        color: #dda20e;
+    }
+    
+    .work-list
+    {
+        display:grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 40px;
+        margin-top:  50px;
+    }
+    
+    .work
+    {
+        margin-left: 25px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .work img{
+        width: 80%;
+        height: auto;
+        display: inline-block;
+        transition: transform 0.5s;
+    }
+    
+    .layer
+    {
+        width: 80%;
+        height: 0;
+        background: linear-gradient(rgba(0,0,0,0.6), #dda20e);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 0 20px;
+        text-align: center;
+        font-size: 12px;
+        transition: height 0.5s;
+    }
+    
+    .layer h3
+    {
+        font-weight: 600;
+        padding: 2px 0;
+        margin-top: 20%;
+    }
+    
+    .layer a{
+        margin-top: 20px;
+        color: #dda20e;
+        text-decoration: none;
+        font-size: 10px;
+        line-height: 30px;
+        background: #fff;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        text-align: center;
+    
+    }
+
+    .layer i{
+        font-size: 12px;
+    }
+
+    .layer audio
+    {
+        display: inline-block;
+        transform: scale(0.7);
+    }
+    
+    .work:hover img
+    {
+        transform: scale(1.1);
+
+    }
+    
+    .work:hover .layer
+    {
+        height: 100%;
+        transform: scale(1.1);
+        
+    }
+    
+    .btn
+    {
+        display: block;
+        margin: 20px auto;
+        width: fit-content;
+        border: 1px solid #dda20e;
+        padding: 14px 30px;
+        border-radius: 6px;
+        text-decoration: none;
+        color: #fff;
+        transition: background 0.5s;
+    }
+    
+    .btn:hover
+    {
+        background: #dda20e;
+    }
+    
+
+    .layer .fa-solid.fa-bars
+    {
+        padding-top: 10px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    #review .fa-solid.fa-circle-arrow-left
+    {
+        color: #dda20e;
+        text-decoration: none;
+        font-size: 30px;
+        position: relative;
+        margin-top: 30%;
+        margin-left: 5%;
+        top: -60px;
+
+    }
+
+    .rate
+    {
+        display: block;
+        margin: 20px auto;
+        width: fit-content;
+        border: 1px solid #fefefe;
+        padding: 14px 30px;
+        border-radius: 6px;
+        text-decoration: none;
+        color: #fff;
+  
+    }
+
+    #review h2{
+        color: #dda20e;
+        text-decoration: none;
+        font-size: 30px;
+        margin-left: 3%;
+        justify-content: left;
+    }
+
+    #review h3{
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 14px;
+        margin-left: 3%;
+        justify-content: left;
+    }
+
+    #review .fa-solid
+    {
+        color: #dda20e;
+        text-decoration: none;
+        font-size: 30px;
+        position: relative;
+        top: -40px;
+    }
+
+    .layer .fa-light .fa-arrows-maximize
+    {
+        color: #dda20e;
+        text-decoration: none;
+        font-size: 30px;
+        position: relative;
+        top: -40px;
+        margin-top: 30px;
+        margin-left: 5%;
+    }
+
+    #review
+    {
+        flex-basis: 60%;
+        position: fixed;
+        top: 0px;
+        right: -300px;
+        /*to keep it hidden*/
+        width: 300px;
+        height: 100vh;
+        padding-top: 100px;
+        z-index: 2;
+        transition: right 0.5s;
+        background: #000000;
+    }
+    
+    #review form
+    {
+        width: 100%;
+        border-radius: 10px;
+    }
+    
+    form input, form textarea
+    {
+        top: 40px;
+        width: 100%;
+        border: 1;
+        outline:#dda20e;
+        background: #181818;
+        padding: 10px ;
+        margin: 40px 0;
+        color: #fff;
+        font-size: 13px;
+        border-radius: 6px;
+        justify-content:center;
+
+    }
+
+
+    .btn.btn2
+    {
+        background: #dda20e;
+        width: fit-content;
+        height: 40px;
+        padding: 8px 20px;
+        justify-content:left;
+    }
+
+    .btn.btn3
+    {
+        background: #ffffff;
+        color: #dda20e;
+        display: block;
+        margin: 50px auto;
+        width: fit-content;
+        border: 1px solid #dda20e;
+        padding: 8px 30px;
+        border-radius: 6px;
+        text-decoration: none;
+    }
+
+    form .btn2 
+    {
+        padding: 14px 60px;
+        font-size: 18px;
+        margin-top: -30px;
+        margin-left: 5%;
+        cursor: pointer;  
+        color: #000000; 
+    }
+
+    .rating {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content:left;
+        }
+        
+        .rating > input{
+         display:none;
+        }
+        
+        .rating > label {
+        position: relative;
+        width: 1.1em;
+        font-size: 40px;
+        color: #FFD700;
+        cursor: pointer;
+        }
+        
+        .rating > label::before{
+        content: "\2605";
+        position: absolute;
+        opacity: 0;
+        }
+        
+        .rating > label:hover:before,
+        .rating > label:hover ~ label:before {
+        opacity: 1 !important;
+        }
+        
+        .rating > input:checked ~ label:before{
+        opacity:1;
+        }
+        
+        .rating:hover > input:checked ~ label:before{ 
+        opacity: 0.4;
+         }    
+    
+    @media only screen and (max-width: 600px) {
+       
+
+        #portfolio
+        {
+            padding: 100px 0;
+        }
+        
+        .work-list
+        {
+            display:grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 40px;
+            margin-top:  50px;
+        }
+        
+        .work
+        {
+            position: relative;
+            overflow: hidden;
+            margin-top:  0px;
+        }
+        
+        .work img{
+            width: 80%;
+            height: auto;
+            transition: transform 0.5s;
+        }
+        
+        .layer
+        {
+            width: 80%;
+            height: 270px;
+            background: linear-gradient(rgba(0,0,0,0.6), #dda20e);
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 0 px;
+            text-align: center;
+            font-size: 13px;
+            transition: scale 0.5s;
+
+        }
+
+        .work:hover img
+        {
+            transform: scale(1.0);
+
+        }
+        
+        .work:hover .layer
+        {
+            height: 270px;
+            transform: scale(1.0);
+
+        }
+
+            .layer audio
+        {
+            display: inline-block;
+            transform: scale(0.9);
+        }
+
+
+        #review
+        {
+            flex-basis: 60%;
+            right: -300px;
+            /*to keep it hidden*/
+            width: 300px;
+            height: 100vh;
+            padding-top: 30px;
+            z-index: 2;
+            transition: right 0.5s;
+            background: #000000;
+        }
+
+        form input, form textarea
+        {
+            top: 40px;
+            width: 100%;
+            border: 1;
+            outline:#dda20e;
+            background: #181818;
+            padding: 10px ;
+            margin: 40px 0;
+            color: #fff;
+            font-size: 14px;
+            border-radius: 6px;
+            justify-content:center;
+    
+        }
+
+        #review h2{
+            color: #dda20e;
+            text-decoration: none;
+            font-size: 25px;
+            margin-left: 3%;
+            justify-content: left;
+        }
+    
+        #review h3{
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 12px;
+            margin-left: 3%;
+            justify-content: left;
+        }
+    
+        #review .fa-solid
+        {
+            color: #dda20e;
+            text-decoration: none;
+            font-size: 30px;
+            position: relative;
+            top: -40px;
+        }
+    
+            
+    }
+        

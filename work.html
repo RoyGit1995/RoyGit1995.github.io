@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal portfolio</title>
+    <link rel="stylesheet" href="styleW.css">
+    <script src="https://kit.fontawesome.com/05ca889406.js" crossorigin="anonymous"></script>
+</head>
+<Body>
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="Images/Design.jpg">
+                    <div class="layer">
+                        <h3>Design principles</h3>
+                        <p>A design intervention to improve the shopping experience at supermarkets.The idea was to develop
+                            a prototype that showcase a unique product idea with some interesting solutions.
+                        </p>
+                        <a href="Documents/Design Principles.pdf"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <button type="submit" class="btn btn3" onclick="openreview('Design principles',
+                        'Design Qualities in Everyday Objects which shows examples of Mapping, Affordance, Constraint, Feedback',
+                        'This was a confusing and exciting one which taught me the basics of all.I felt that my colleages also had different perspectives about the same principle.')
+                        ">Review</button>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Images/TopKartaa.jpg">
+                    <div class="layer">
+                        <h3>TopKart</h3>
+                        <p>A design intervention to improve the shopping experience at supermarkets.The idea was to develop
+                            a prototype that showcase a unique product idea with some interesting solutions.
+                        </p>
+                        <a href="Documents/TopKart.pdf"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <button type="submit" class="btn btn3" onclick="openreview('TopKart',
+                        'My group assignment to make a prototype thats is going to change the way we shop at supermarkets',
+                        'This such an interesting project, with all the actions like brainstorming, ideation, identifying users, prototyping, report generation, presentation, user interviews etc.')
+                        ">Review</button>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Images/PhotographyNew.jpg">
+                    <div class="layer">
+                        <h3>Photography</h3>
+                        <p>A photography assignment dedicated to moments in 
+                            the movments. an attempt by me using my street photography camera around the city of Limerick.
+                        </p>
+                        <a href="Documents/Photography.pdf"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <button type="submit" class="btn btn3" onclick="openreview('Photography',
+                        'An assignment from Mark, that tought me a lot in photography and this is my attempt to capture movement shots',
+                        'I felt good and fun while doing it, this gave a whole new idea about composition and editing. I was proud of a photograph that i took where the birds are trying to fly in a ellipse line')
+                        ">Review</button>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Images/Rooster.jpg">
+                    <div class="layer">
+                        <h3>Audio Works</h3>
+                        <p>A radio advert assignment about a funny theme and a brand promo
+                        </p>
+                        <a href="Documents/Strepsils_ad_sound details.pdf"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <p><br>
+                        </p>
+                        <audio controls>
+                            <source src="Documents/ad.mp3" type="audio/mpeg">
+                          Your browser does not support the audio element.
+                        </audio>
+                        <button type="submit" class="btn btn3" onclick="openreview('Audio Works',
+                        'An assignment from Mark, which was something i could do much more than i thought. Please hear it once',
+                        'I already had an idea about song composition which helped in this task. Mark was so supportive to go for a funny radio advert and which turned out be a good one.')
+                        ">Review</button>
+                    </div>
+                </div>
+                <div id="review">
+                    <form name="submit-to-google-sheet">
+                        <h2 id="Title"></h2>
+                        <br>
+                        <h3 id="Goal"></h3>
+                        <br>
+                        <h3 id="Learnt"></h3>
+                        <br>
+                        <div class="rate">
+                            <h3><br> Your rating</h3>
+                        <div class="rating">
+                            <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label>
+                            <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label>
+                            <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label>
+                            <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label>
+                            <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+                        </div>
+                        <textarea name="Message" rows="6" placeholder="Your comment"></textarea>
+                        <textarea id="TitleForm" name="Title" rows="6" placeholder="Your comment" style="display:none"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <i class="fa-solid fa-circle-arrow-left" onclick="closemenu()"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+        var sidemenu = document.getElementById("review");
+        var title = document.getElementById("Title");
+        var goal = document.getElementById("Goal");
+        var learnt = document.getElementById("Learnt");
+        var titleFormId = document.getElementById("TitleForm");
+        function openreview(titleCurrent,goalCurrent,learntCurrent)
+        {
+            sidemenu.style.right="0";
+            title.textContent = titleCurrent;
+            goal.textContent = goalCurrent;
+            learnt.textContent = learntCurrent;
+            titleFormId.textContent = titleCurrent;
+        }
+        function closemenu()
+        {
+            sidemenu.style.right="-300px";
+        }
+      
+    </script> 
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwOIRr7fFMnQ0QPwg8566UtDBqdsTAiSgRIf7mZ3-n-EFUQCM7ZexUxI0uLxJzaOahV/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</Body>
+</html>
